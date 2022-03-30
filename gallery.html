@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatiana Turcin - Fizjoterapia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body id="body" v-cloak>
+    <header class="header">
+        <div class="container">
+            <div class="flag-container" @click="toggleLanguage">
+                <img v-if="languageSwitched" src="images/flagUK.jpg" alt="PL">
+                <img v-else src="images/flagPL.jpg" alt="UK">
+                <span>UA/PL</span>
+            </div>
+            <span class="name"><a href="index.html">{{ languageSwitched? 'Tatiana Turcin' : 'Татьяна Турчин' }}</a></span>
+            <a href="gallery.html" class="link">{{ languageSwitched? 'Galeria' : 'галерея' }}</a>
+            <a href="gallery.html" class="icon-photos"><i class="fa-solid fa-photo-film"></i></a>
+        </div>
+    </header>
+
+    <section class="gallery">
+        <div class="container">
+            <video src="videos/vid1.1.mp4"></video>
+            <img src="images/g4.JPG" alt="">
+            <video src="videos/vid2.1.mp4"></video>
+            <img src="images/g3.JPG" alt="">
+        </div>
+
+        <div class="container">
+            <img src="images/g1.JPG" alt="">
+            <video src="videos/vid3.1.mp4"></video>
+            <img src="images/g2.JPG" alt="">
+            <video src="videos/vid3.1.mp4"></video>
+        </div>
+
+    </section>
+</body>
+
+</html>

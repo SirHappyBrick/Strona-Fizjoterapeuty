@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatiana Turcin - Fizjoterapia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body id="body" v-cloak>
+
+    <header class="header">
+        <div class="container">
+            <div class="flag-container" @click="toggleLanguage">
+                <img v-if="languageSwitched" src="images/flagUK.jpg" alt="PL">
+                <img v-else src="images/flagPL.jpg" alt="UK">
+                <span>UA/PL</span>
+            </div>
+            <span class="name" href="index.html">{{ languageSwitched? 'Tatiana Turczin' : 'Тeтяна Турчин' }}</span>
+            <a href="gallery.html" class="link">{{ languageSwitched? 'Galeria' : 'галерея' }}</a>
+            <a href="gallery.html" class="icon-photos"><i class="fa-solid fa-photo-film"></i></a>
+        </div>
+    </header>
+
+    <section class="main" id="main">
+        <div class="img-container">
+            <img src="images/main1.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-container">
+
+            <div class="text">
+                <h1 data-aos="fade-up" data-aos-delay="150">{{ languageSwitched? 'Cześć!' : 'Привіт!' }}</h1>
+                <p data-aos="fade-up" data-aos-delay="300">{{ languageSwitched? 'Nazywam się Tatiana Turczin. Ukończyłam Uniwersytet Drahomanowa w Kijowie oraz Uniwersytet Pedagogiczny w Krakowie. Studiowałam w ramach programu podwójnego stopnia w specjalizacji Rehabilitacji Ruchowej.' : "Мене звати Тетяна Турчин. Закінчила університет ім. М. П. Драгоманова та Краківський педагогічний університет. Навчалась по програмі подвійного диплому. Освітня програма 'Основи здоров'я та фізична реабілітація'." }}</p>
+                <p data-aos="fade-up" data-aos-delay="450">{{ languageSwitched? 'Od 3 lat praktykowałam rehabilitację w Kijowie, głównie z osobami z trudnościami kręgosłupa. Mam doświadczenie z takimi problemami jak: kifoza, skolioza , lordoza, przepuklina, czy wypukłość.' : "Вже 3 роки,як працюю по спеціальності у Києві. Частіше з особами ,які мають проблеми з хребтом." }}</p>
+                <p data-aos="fade-up" data-aos-delay="600">{{ languageSwitched? 'Zapraszam do współpracy również osoby mające problemy ze stawem biodrowym, płaskostopiem, czy innymi schorzeniami. Rozmawiam po polsku oraz po ukraińsku. Mój nr telefonu: 664-606-682 ' : "Кіфоз,лордоз,сколіоз, грижі та протрузії. А також з особами у яких проблеми з тазостегновим суглобом, пласкостопість. Мій номер у Польщі: 664606682 - Розмовляю українською,польською" }}</p>
+            </div>
+
+            <img src="images/about.jpg" alt="" data-aos="fade-right" data-aos-delay="150">
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="text-container">
+            <h1 data-aos="fade-right" data-aos-delay="150">{{ languageSwitched? 'Współpraca ze mną to:' : 'Співпраця зі мною - це:' }}</h1>
+            <ul>
+                <li data-aos="fade-right" data-aos-delay="300">{{ languageSwitched? 'Indywidualne podejście do problemu' : 'Iндивідуальний підхід до проблеми' }}</li>
+                <li data-aos="fade-right" data-aos-delay="450">{{ languageSwitched? 'Rehabilitacja całego ciała' : 'Реабілітація всього тіла' }}</li>
+                <li data-aos="fade-right" data-aos-delay="600">{{ languageSwitched? 'Spalone kalorie podczas sesji' : 'Спалення калорій під час тренування' }}</li>
+                <li data-aos="fade-right" data-aos-delay="750">{{ languageSwitched? 'Poprawa kondycji' : 'Поліпшення стану організму' }}</li>
+                <li data-aos="fade-right" data-aos-delay="900">{{ languageSwitched? 'Wspomaganie ciała tejpami' : 'Підтримка тіла за допомогою тейпів.( схуднення та зняття болю)' }}</li>
+            </ul>
+        </div>
+        <div class="imgs-container" data-aos="fade-up" data-aos-delay="450">
+            <div class="img-container">
+                <img src="images/features1.jpg" alt="" class="img1">
+            </div>
+            <div class="img-container">
+                <img src="images/features2.jpg" alt="" class="img2">
+            </div>
+            <div class="img-container">
+                <img src="images/features3.jpg" alt="" class="img3">
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container" data-aos="slide-up" data-aos-delay="300">
+            <form action="https://formsubmit.co/Tatianaturchin@gmail.com" method="POST">
+                <h1>{{ languageSwitched? 'Skontaktuj się ze mną!' : "зв'яжіться зі мною" }}</h1>
+                <input type="text" name="name" placeholder="name" required>
+                <input type="email" name="email" placeholder="e-mail" required>
+                <input type="text" name="message" placeholder="message" class="text-area" cols="30" rows="10" required>
+                <button type="submit">{{ languageSwitched? 'Wyślij' : "відправити" }}</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer" id=""footer>
+        <div class="share">
+            <a href="" class="fab fa-facebook" data-aos="fade-right" data-aos-delay="300"></a>
+            <a href="" class="fab fa-twitter" data-aos="fade-down" data-aos-delay="300"></a>
+            <a href="https://www.instagram.com/tatiana_turchin87" class="fab fa-instagram" data-aos="fade-up" data-aos-delay="300"></a>
+            <a href="" class="fab fa-linkedin" data-aos="fade-left" data-aos-delay="300"></a>
+        </div>
+
+        <h1 class="credit">created by <span>Oskar Madej</span> 2022</h1>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
